@@ -26,9 +26,14 @@ public class App {
                 System.out.println("Vad du gav är konstig, försök igen med ett nummer");
             }
         } while (loop);
-        if (Strcount < 2 && Strcount > -1) {
+        if (Strcount<=-1)
+        {
+            System.out.println("Det gärller ett hel tal större än 1.");
+        }
+        else if (Strcount < 2 && Strcount > -1) {
             System.out.println(getline);
         } else {
+
             getline = getline + "*";
             gotit.add(getline);
             length = getLongestLineLength(gotit); // att räkna att placera *
