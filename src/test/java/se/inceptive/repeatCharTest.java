@@ -4,12 +4,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/* Ta bort denna rad och motsvarande rad längst ned i filen för att använda testen
+
 
 // Detta är enhetstest för inlämningen repeatChar
 
-public class repeatCharTest
-{
+public class repeatCharTest {
     @Test
     public void testRepeatCharSingle() {
         char input1 = '!';
@@ -43,4 +42,4 @@ public class repeatCharTest
         assertEquals(expected, actual);
     }
 }
-Ta bort denna rad för att använda testen */
+

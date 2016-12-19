@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-/* Ta bort denna rad och motsvarande rad längst ned i filen för att använda testen
+
 
 // Enhetstest för inlämningen indexMenu
 
@@ -49,4 +49,3 @@ public class indexMenuTest {
         assertEquals(expected, actual);
     }
 }
-Ta bort denna rad för att använda testen */
