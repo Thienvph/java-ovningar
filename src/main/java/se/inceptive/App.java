@@ -60,10 +60,11 @@ public class App {
                 }
             }
             getline = getline + gotit.get(0);
+            System.out.println(getline);
 
         }//slut else
 
-        System.out.println(getline);
+
 
     }
 
