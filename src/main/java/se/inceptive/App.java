@@ -65,7 +65,7 @@ public class App {
                 }
             }
             getline = getline + gotit.get(0);
-            System.out.println(getline);
+            System.out.println("Check din resultat: "+getline);
 
         }//slut else
 
