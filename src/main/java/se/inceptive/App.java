@@ -26,11 +26,9 @@ public class App {
                 System.out.println("Vad du gav är konstig, försök igen med ett nummer");
             }
         } while (loop);
-        if (Strcount<=-1)
-        {
+        if (Strcount <= -1) {
             System.out.println("Det gärller ett hel tal större än 1.");
-        }
-        else if (Strcount < 2 && Strcount > -1) {
+        } else if (Strcount < 2 && Strcount > -1) {
             System.out.println(getline);
         } else {
 
@@ -49,26 +47,25 @@ public class App {
                     gotit.add(getline);
                 }
             }
-            gotit = split(getline, "*");
+            gotit = split(getline, "*"); // get siffrona utan "*"
+            getline = gotit.get(gotit.size() - 1);
 
-
-            if (Strcount % 2 != 0) {
-                getline = "*";
+            if (getline.equalsIgnoreCase("1")) {
+                getline = "";
                 for (int rev = gotit.size() - 1; rev > 0; rev--) {
                     getline = getline + gotit.get(rev) + "*";
                 }
 
             } else {
-                getline = "";
+                getline = "*";
                 for (int rev = gotit.size() - 1; rev > 0; rev--) {
                     getline = getline + gotit.get(rev) + "*";
                 }
             }
             getline = getline + gotit.get(0);
-            System.out.println("Check din resultat: "+getline);
+            System.out.println("Check ditt result: " + getline);
 
         }//slut else
-
 
 
     }
