@@ -10,22 +10,27 @@ public class App {
         // inlämning 5 CounterString program / done
         System.out.println("Den magiska strängen! ");
         boolean loop = true;
-        int Strcount = 0, length;
         String getline = "";
-        ArrayList<String> gotit = new ArrayList<String>();
         do { // försök ta in rätt input
 
             System.out.print("Ge mig ditt önskade nummer: ");
             BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
             try {
                 getline = input.readLine();
-                Strcount = Integer.parseInt(getline);
                 loop = false;
 
             } catch (Exception e) {
                 System.out.println("Vad du gav är konstig, försök igen med ett nummer");
             }
         } while (loop);
+        getline = counterString(getline);
+        System.out.println("Check ditt result: " + getline);
+    }
+// Inlämning Counterstring / Done
+    public static String counterString(String getline) {
+        int Strcount = 0, length;
+        ArrayList<String> gotit = new ArrayList<String>();
+        Strcount = Integer.parseInt(getline);
         if (Strcount <= -1) {
             System.out.println("Det gärller ett hel tal större än 1.");
         } else if (Strcount < 2 && Strcount > -1) {
@@ -63,12 +68,12 @@ public class App {
                 }
             }
             getline = getline + gotit.get(0);
-            System.out.println("Check ditt result: " + getline);
+
 
         }//slut else
-
-
+        return getline;
     }
+
 
     // Inlämning 1 RepeatChar / done
     public static String repeatChar(char b, int nr) {
