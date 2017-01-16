@@ -11,6 +11,7 @@ public class App {
         System.out.println("Den magiska strängen! ");
         boolean loop = true;
         String getline = "";
+
         do { // försök ta in rätt input
 
             System.out.print("Ge mig ditt önskade nummer: ");
@@ -23,20 +24,22 @@ public class App {
                 System.out.println("Vad du gav är konstig, försök igen med ett nummer");
             }
         } while (loop);
+
         getline = counterString(getline);
         System.out.println("Check ditt result: " + getline);
     }
-// Inlämning Counterstring / Done
+
+    // Inlämning Counterstring / Done
     public static String counterString(String getline) {
-        int Strcount = 0, length;
+        int length = 0;
+        int Strcount = Integer.parseInt(getline);
         ArrayList<String> gotit = new ArrayList<String>();
-        Strcount = Integer.parseInt(getline);
-        if (Strcount <= -1) {
-            System.out.println("Det gärller ett hel tal större än 1.");
+// algoritm
+        if (Strcount < 0) {
+            getline = "Det gärller ett hel tal större än -1.";
         } else if (Strcount < 2 && Strcount > -1) {
             System.out.println(getline);
         } else {
-
             getline = getline + "*";
             gotit.add(getline);
             length = getLongestLineLength(gotit); // att räkna att placera *
@@ -52,8 +55,9 @@ public class App {
                     gotit.add(getline);
                 }
             }
-            gotit = split(getline, "*"); // get siffrona utan "*"
-            getline = gotit.get(gotit.size() - 1);
+            // plocka siffrorna utan "*"
+            gotit = split(getline, "*");
+            getline = gotit.get(gotit.size() - 1); // plocka sista sifran i array gotit att jämnföra
 
             if (getline.equalsIgnoreCase("1")) {
                 getline = "";
@@ -67,13 +71,12 @@ public class App {
                     getline = getline + gotit.get(rev) + "*";
                 }
             }
-            getline = getline + gotit.get(0);
+            getline = getline + gotit.get(0); // plocka sifran som användaren har get
 
+        }
 
-        }//slut else
         return getline;
     }
-
 
     // Inlämning 1 RepeatChar / done
     public static String repeatChar(char b, int nr) {

@@ -32,7 +32,10 @@ public class CounterStringTest{
     public static Collection Resulttable(){
         return Arrays.asList(new Object[][]{
                         {"10","1*3*5*7*10"},
-                        {"17","*2*4*6*8*11*14*17"}
+                        {"17","*2*4*6*8*11*14*17"},
+                { "0","0"},
+                { "1","1"},
+                {"-1","Det gärller ett hel tal större än -1."}
                  }
         );
     }
